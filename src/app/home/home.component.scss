@@ -1,0 +1,9 @@
+@import "../../scss/variables";
+
+.ns-root{
+  background: green;
+}
+
+Label{
+  font-size: $font_size + 4;
+}

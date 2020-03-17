@@ -1,0 +1,10 @@
+// Overwrite stylesheet for android
+.ns-root{
+  background-color: #f1f1f1;  
+}
+
+// Buttons
+Button {
+  android-elevation: 0;
+  android-dynamic-elevation-offset: 0;
+}
