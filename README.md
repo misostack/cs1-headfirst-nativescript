@@ -32,6 +32,7 @@
 - https://dev.to/avatsaev/simple-state-management-in-angular-with-only-services-and-rxjs-41p8
 - https://blog.angulartraining.com/tutorial-state-management-with-observable-store-services-5ba53d87ad94
 - https://ngrx.io/guide/store
+- https://github.com/NativeScript/sample-Groceries/tree/master/app/login
 
 ## CLI
 

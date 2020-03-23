@@ -1,6 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 // always impor BaseModule
-import { BaseModule } from "../base/base.module";
+import { SharedModule } from "@shared/shared.module";
 
 import { CoreRoutingModule } from "./core-routing.module";
 import { HomeContainer } from "./containers";
@@ -13,7 +13,7 @@ const CORE_CONTAINERS = [
 
 @NgModule({
     imports: [
-        BaseModule,
+        SharedModule,
         CoreRoutingModule,
     ],
     declarations: [
