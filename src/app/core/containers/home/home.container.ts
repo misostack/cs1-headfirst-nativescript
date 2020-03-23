@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { LogService, StoreService, AuthService } from "@base/services";
 import { AppStates } from "@base/models";
 import { Observable } from "rxjs";
+import { localize } from "nativescript-localize";
 
 @Component({
     selector: "Home",
@@ -10,6 +11,7 @@ import { Observable } from "rxjs";
 })
 export class HomeContainer implements OnInit {
 
+    appName: string;
     appStates$: Observable<AppStates>
     appStates: AppStates;    
 
@@ -25,8 +27,9 @@ export class HomeContainer implements OnInit {
     }
 
     ngOnInit(): void {
+        this.appName = localize('app.name')
         // Init your component properties here.
-        this.log.debug('EXAMPLE HOME')        
+        this.log.debug('EXAMPLE HOME')
     }
 
     raiseError() {

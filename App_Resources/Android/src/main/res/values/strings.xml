@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="_sprintf_with_numbered_placeholders_1lf5Nr">"format me %2$s one more time %1$s"</string>
+  <string name="_auth_containers_login_failed_ZgP9RD">"Hello %1$s. You have been logged in successfully"</string>
+  <string name="_auth_containers_login_success_G1ivQ">"Hello %1$s. You have been logged in successfully"</string>
+  <string name="_auth_containers_login_list_SR3Ru">"lorem ipsum 001lorem ipsum 002lorem ipsum 003"</string>
+  <string name="_auth_containers_login_description_26Ef1l">"this is login page"</string>
+  <string name="_auth_containers_login_title_2suMPq">"Login Page Title"</string>
+  <string name="_ios_info_plist_NSLocationWhenInUseUsageDescription_ZpKiIF">"This will be added to InfoPlist.strings"</string>
+  <string name="_app_name_1k3Sbz">"NativeScript App"</string>
+  <string name="app_name">"NativeScript App"</string>
+  <string name="title_activity_kimera">"NativeScript App"</string>
+</resources>

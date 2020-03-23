@@ -1,6 +1,7 @@
 <Page class="ns-root">
+    
     <ActionBar>
-        <Label text="{{ appStates?.name }} - {{ appStates?.version }}"></Label>
+        <Label text="{{appName}} - {{ appStates?.name }} - {{ appStates?.version }}"></Label>
     </ActionBar>
     
     <GridLayout>
@@ -22,7 +23,9 @@
             <Button (tap)="raiseError()"  text="Raise Error"></Button>
             <Label text="{{ appStates?.auth?.token }}"></Label>            
             <Button *ngIf="appStates?.auth?.token?.length > 0" (tap)="onLogout()" text="Logout"></Button>            
-            <Button *ngIf="appStates?.auth?.token?.length === 0" (tap)="onLogin()" text="Log in"></Button>            
+            <Button *ngIf="appStates?.auth?.token?.length === 0" (tap)="onLogin()" text="Log in"></Button>
+            <Label text="{{ 'auth.containers.login.title' | L }}"></Label>
+                      
         </StackLayout>
     </GridLayout>
 </Page>

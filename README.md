@@ -1,11 +1,12 @@
 # Nativescript App Architecture
 
 > Todo
-> 
+> - [x] General App Structure and Architecture
 > - [x] Stylesheet
 > - [x] Assets : Images, JSON, ...
 > - [x] Routing and lazy load
 > - [x] AppState
+> - [ ] I18n : https://www.npmjs.com/package/nativescript-localize
 > - [ ] Example Shared Components, Pipes
 > - [ ] ExampleModule
 
@@ -39,6 +40,7 @@ export interface AppStates {
 - https://blog.angulartraining.com/tutorial-state-management-with-observable-store-services-5ba53d87ad94
 - https://ngrx.io/guide/store
 - https://github.com/NativeScript/sample-Groceries/tree/master/app/login
+- https://libraries.io/github/nea/nativescript-realworld-example-app
 
 ## CLI
 
