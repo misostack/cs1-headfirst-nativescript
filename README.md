@@ -5,24 +5,30 @@
 > - [x] Stylesheet
 > - [x] Assets : Images, JSON, ...
 > - [x] Routing and lazy load
-> - [ ] AppState
+> - [x] AppState
+> - [ ] Example Shared Components, Pipes
+> - [ ] ExampleModule
 
 > **AppState**
 
-```json
-[
-  "CoreModule": {
-    "user": {
-      "current": IAuthUser
-    }
-  }
-  "BaseModule": {
+```javascript
+export interface AuthState {
+  token: string;  
+}
 
-  },
-  "ExampleModule": {
+export interface UserState {
+  id: string;
+  firstName: string;
+  lastName: string;
+}
 
-  }
-]
+export interface AppStates {
+  name: string;
+  debug: boolean;
+  version: number;
+  auth: AuthState;
+  user: UserState;
+}
 ```
 
 ## Refs
