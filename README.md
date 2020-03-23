@@ -1,5 +1,31 @@
 # Nativescript App Architecture
 
+> Todo
+> 
+> - [x] Stylesheet
+> - [x] Assets : Images, JSON, ...
+> - [ ] Routing and lazy load
+> - [ ] AppState
+
+> **AppState**
+
+```json
+[
+  "CoreModule": {
+    "user": {
+      "current": IAuthUser
+    }
+  }
+  "BaseModule": {
+
+  },
+  "ExampleModule": {
+
+  }
+]
+```
+
+
 ## CLI
 
 - https://www.nativescript.org/blog/the-future-of-building-nativescript-apps

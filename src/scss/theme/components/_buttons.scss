@@ -2,3 +2,9 @@ Button.primary-btn{
   color: $primary_color;
   background-color: $primary_color;
 }
+
+Button.image-button{
+  background-image: url("~/assets/images/entry-components.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
