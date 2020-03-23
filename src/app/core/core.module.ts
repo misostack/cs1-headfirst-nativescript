@@ -1,13 +1,27 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { NativeScriptCommonModule } from 'nativescript-angular/common';
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+// always impor BaseModule
+import { BaseModule } from "../base/base.module";
 
+import { CoreRoutingModule } from "./core-routing.module";
+import { HomeContainer } from "./containers";
 
+const CORE_COMPONENTS = [];
+
+const CORE_CONTAINERS = [
+    HomeContainer,
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    NativeScriptCommonModule
-  ],
-  schemas: [NO_ERRORS_SCHEMA]
+    imports: [
+        BaseModule,
+        CoreRoutingModule,
+    ],
+    declarations: [
+        CORE_COMPONENTS,
+        CORE_CONTAINERS,
+    ],
+    schemas: [
+        NO_ERRORS_SCHEMA
+    ]
 })
-export class CoreModule { }
+export class HomeModule { }

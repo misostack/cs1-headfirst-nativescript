@@ -18,7 +18,9 @@
             "~/*": [
                 "src/*"
             ],
-            "@app/*": ["src/app/*"],    
+            "@app/*": ["src/app/*"],
+            "@base/*": ["src/app/base/*"],
+            "@core/*": ["src/app/core/*"],
             "@environments/*": ["src/environments/*"],            
             "*": [
                 "./node_modules/*"

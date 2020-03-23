@@ -2,10 +2,10 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: "Home",
-    templateUrl: "./home.component.html",
-    styleUrls: ["./home.component.scss"]
+    templateUrl: "./home.container.html",
+    styleUrls: ["./home.container.scss"]
 })
-export class HomeComponent implements OnInit {
+export class HomeContainer implements OnInit {
 
     constructor() {
         // Use the component constructor to inject providers.

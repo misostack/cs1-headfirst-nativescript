@@ -40,3 +40,7 @@ yarn.lock
 
 # documents
 documents
+
+# environments
+
+src/environments/environment.ts
