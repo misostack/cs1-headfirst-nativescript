@@ -1,6 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { LogService, StoreService, AuthService, ApiService, FirebaseService } from './services';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard, AuthStateGuard } from './models';
 
 const BASE_SERVICES = [
   LogService,
@@ -8,6 +9,11 @@ const BASE_SERVICES = [
   AuthService,
   ApiService,
   FirebaseService,
+]
+
+const BASE_PROVIDERS = [
+  AuthGuard,
+  AuthStateGuard,
 ]
 
 @NgModule({
@@ -20,6 +26,7 @@ const BASE_SERVICES = [
   ],
   providers: [
     ...BASE_SERVICES,
+    ...BASE_PROVIDERS,
   ],
   schemas: [NO_ERRORS_SCHEMA]
 })

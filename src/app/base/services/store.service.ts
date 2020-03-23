@@ -11,10 +11,14 @@ import {
   clear
 } from "tns-core-modules/application-settings";
 import { environment } from "@environments/environment";
-import { AppStates, STORE_DATA_TYPES } from "@base/models";
-import { StoreDomain } from "../models/store.domains";
+import {
+  AppStates,
+  StoreDomain,
+  AppState,
+  AuthState, 
+  UserState,  
+} from "@base/models";
 import { Subject, BehaviorSubject, Observable } from "rxjs";
-import { AuthState, UserState, AppState } from "../models/states.interface";
 import { delay } from "rxjs/operators";
 
 Injectable({
@@ -54,8 +58,8 @@ export class StoreService {
     return this._appStateChanges$.asObservable().pipe(delay(500));
   }
 
-  get<STORE_DATA_TYPES>(key: StoreDomain, defaultValue: any = null){    
-    return this._get<STORE_DATA_TYPES>(key , 'app', defaultValue);
+  get<StoreDataTypes>(key: StoreDomain, defaultValue: any = null){    
+    return this._get<StoreDataTypes>(key , 'app', defaultValue);
   }
 
   private clear(){
@@ -65,12 +69,17 @@ export class StoreService {
   cleanLoggedInData() {
     this._remove('auth');
     this._remove('user');
-    // stream new states
-    this._appStateChanges$.next(this._getAppStates());
+    // stream appstates
+    const appStates = this._getAppStates()
+    this._appStateChanges$.next(appStates);
+    // stream user state
+    this._authStateChanges$.next(appStates.auth);
+    // stream auth state
+    this._userStateChanges$.next(appStates.user);
   }
 
-  set<STORE_DATA_TYPES>(key: StoreDomain, value: any){
-    this._set<STORE_DATA_TYPES>(key, 'app', value);
+  set<StoreDataTypes>(key: StoreDomain, value: any){
+    this._set<StoreDataTypes>(key, 'app', value);
     // stream the appstates
     this._appStateChanges$.next(this._getAppStates());
     // stream auth state
@@ -90,9 +99,9 @@ export class StoreService {
     remove(store_key);
   }
 
-  private _get<STORE_DATA_TYPES>(key: StoreDomain, prefix : 'app' = 'app', defaultValue: any){
+  private _get<StoreDataTypes>(key: StoreDomain, prefix : 'app' = 'app', defaultValue: any){
     const store_key = `${prefix + '_' + key}`;
-    defaultValue = <STORE_DATA_TYPES>defaultValue;
+    defaultValue = <StoreDataTypes>defaultValue;
     let t = typeof(defaultValue)
 
     if(t === 'string'){
@@ -107,17 +116,15 @@ export class StoreService {
     // default
     const store_value = getString(store_key, '');
     if(store_value.length > 0){
-      console.log(store_value)
       return JSON.parse(store_value);
     }else{
       return defaultValue;
     }    
   }
 
-  private _set<STORE_DATA_TYPES>(key: StoreDomain, prefix : 'app' = 'app', value: any){
+  private _set<StoreDataTypes>(key: StoreDomain, prefix : 'app' = 'app', value: any){
     const store_key = `${prefix + '_' + key}`; 
     let t = typeof(value);
-    console.log('value', typeof(value), JSON.stringify(value))
     if(t === 'string'){
       setString(store_key, value);
       return;

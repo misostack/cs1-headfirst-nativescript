@@ -1,9 +1,7 @@
 import { Injectable } from "@angular/core";
 import { StoreService } from ".";
-import { AuthUser } from "../models";
 import { timer, of} from "rxjs";
 import { map, switchMap } from "rxjs/operators";
-import { AuthState } from "../models";
 import { environment } from "~/environments/environment";
 
 
@@ -15,7 +13,7 @@ export class AuthService {
     private store: StoreService,
   ){}
 
-  logIn( authUser: AuthUser ) {
+  logIn( {identity, password} ) {
     const obs = of({token: environment.mock.token})
     
     timer(500)
