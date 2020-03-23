@@ -23,7 +23,8 @@ export class LogService {
 
   error(error: any) {
     if(DEBUG) {
-      console.error('[ERROR]', error);
+      console.error('[ERROR]', error.message);
+      console.error('[ERROR]', error.stack);
     }
     // SEND ERRORS to slack
     if(SLACK && SLACK.enable) {

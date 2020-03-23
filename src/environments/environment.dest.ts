@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
+  version: 0,
   name: 'ENV_NAME',
   debug: true,
   slack: {
@@ -8,9 +9,12 @@ export const environment = {
     author_name: 'NS_APP',
   },  
   mock: {
-    token: '',
-    user: '',
-    password: ''
+    token: 'dummy_token',
+    user: {
+      id: 999,
+      firstName: 'Dummy',
+      lastName: 'User',      
+    },
   },
   apiUrl: 'http://localhost:3000/api',
   stripe: {
