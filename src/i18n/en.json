@@ -1,4 +1,5 @@
 {
+  "app.name": "NativeScript App",
   "ios.info.plist": {
     "NSCameraUsageDescription": "Example translate text for ns camera usage"
   }
