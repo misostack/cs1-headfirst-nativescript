@@ -3,11 +3,9 @@ import { NativeScriptCommonModule } from 'nativescript-angular/common';
 import { NativeScriptLocalizeModule } from "nativescript-localize/angular";
 import { TranslatePipe } from './pipes/translate.pipe';
 
-
-
 @NgModule({
   declarations: [
-    TranslatePipe
+    TranslatePipe,
   ],
   imports: [
     NativeScriptCommonModule,
@@ -15,7 +13,7 @@ import { TranslatePipe } from './pipes/translate.pipe';
   ],
   exports: [
     NativeScriptCommonModule,
-    NativeScriptLocalizeModule,
+    NativeScriptLocalizeModule,    
     TranslatePipe,
   ],
   schemas: [NO_ERRORS_SCHEMA]

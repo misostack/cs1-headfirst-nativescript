@@ -1,16 +1,6 @@
 {
   "app.name": "NativeScript App",
   "ios.info.plist": {
-    "NSLocationWhenInUseUsageDescription": "This will be added to InfoPlist.strings"
-  },
-  "auth.containers.login.title": "Login Page Title",
-  "auth.containers.login.description": "this is login page",
-  "auth.containers.login.list": [
-    "lorem ipsum 001",
-    "lorem ipsum 002",
-    "lorem ipsum 003"
-  ],
-  "auth.containers.login.success": "Hello %s. You have been logged in successfully",
-  "auth.containers.login.failed": "Hello %s. You have been logged in successfully",
-  "sprintf with numbered placeholders": "format me %2$s one more time %1$s"
+    "NSCameraUsageDescription": "Example translate text for ns camera usage - Fr"
+  }
 }

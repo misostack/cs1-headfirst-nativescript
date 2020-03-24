@@ -1,4 +1,4 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, ModuleWithProviders } from '@angular/core';
 import { LogService, StoreService, AuthService, ApiService, FirebaseService } from './services';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard, AuthStateGuard } from './models';
@@ -8,7 +8,7 @@ const BASE_SERVICES = [
   StoreService,
   AuthService,
   ApiService,
-  FirebaseService,
+  FirebaseService
 ]
 
 const BASE_PROVIDERS = [
@@ -24,10 +24,16 @@ const BASE_PROVIDERS = [
   exports: [
     
   ],
-  providers: [
-    ...BASE_SERVICES,
-    ...BASE_PROVIDERS,
-  ],
   schemas: [NO_ERRORS_SCHEMA]
 })
-export class BaseModule { }
+export class BaseModule {
+  static forRoot() : ModuleWithProviders {
+    return {
+      ngModule: BaseModule,
+      providers: [
+        ...BASE_SERVICES,
+        ...BASE_PROVIDERS,
+      ]
+    }
+  }
+}

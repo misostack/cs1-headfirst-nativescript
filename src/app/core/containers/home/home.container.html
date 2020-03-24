@@ -24,7 +24,7 @@
             <Label text="{{ appStates?.auth?.token }}"></Label>            
             <Button *ngIf="appStates?.auth?.token?.length > 0" (tap)="onLogout()" text="Logout"></Button>            
             <Button *ngIf="appStates?.auth?.token?.length === 0" (tap)="onLogin()" text="Log in"></Button>
-            <Label text="{{ 'auth.containers.login.title' | L }}"></Label>
+            <Label text="{{ 'APP_NAME' | t }}"></Label>
                       
         </StackLayout>
     </GridLayout>

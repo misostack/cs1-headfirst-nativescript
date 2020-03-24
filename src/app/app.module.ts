@@ -9,7 +9,7 @@ import { BaseModule } from "./base/base.module";
         AppComponent
     ],
     imports: [
-        BaseModule,
+        BaseModule.forRoot(),
         NativeScriptModule,
         AppRoutingModule,
     ],

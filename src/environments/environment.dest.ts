@@ -3,6 +3,7 @@ export const environment = {
   version: 0,
   name: 'ENV_NAME',
   debug: true,
+  locale: 'fr',
   slack: {
     enable: false,
     url: '',

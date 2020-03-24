@@ -1,11 +1,12 @@
 <Page class="ns-root">
   <ActionBar>
-      <Label text="{{ 'auth.containers.login.title' | L }}"></Label>
+      <Label text="{{ 'APP_NAME' | t }}"></Label>
   </ActionBar>
   
   <GridLayout>
       <StackLayout row="0">
-        <Button (tap)="doLogin()" text="{{ 'Login' | translate:'a':'b' }}" class="btn btn-primary"></Button>            
+        <Label text="{{ 'TRANSLATE_SERVICE_EXAMPLE' | t:example }}"></Label>
+        <Button (tap)="doLogin()" text="Login" class="btn btn-primary"></Button>            
       </StackLayout>
   </GridLayout>
 </Page>

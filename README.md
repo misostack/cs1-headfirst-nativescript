@@ -6,7 +6,8 @@
 > - [x] Assets : Images, JSON, ...
 > - [x] Routing and lazy load
 > - [x] AppState
-> - [ ] I18n : https://www.npmjs.com/package/nativescript-localize
+> - [x] I18n : https://www.npmjs.com/package/nativescript-localize --> translated text will be generated and stored in app resource but it doesn't support hot reload for development
+> - [ ] I18n : custom pipe and direct import from lang constant --> support hot reload for development, does not suppot built-in text in app resource, and translation.
 > - [ ] Example Shared Components, Pipes
 > - [ ] ExampleModule
 
