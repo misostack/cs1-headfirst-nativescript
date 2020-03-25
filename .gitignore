@@ -44,3 +44,6 @@ documents
 # environments
 
 src/environments/environment.ts
+
+0.10.9
+coverage

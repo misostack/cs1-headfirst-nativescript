@@ -1,7 +1,16 @@
 import { NgModule, NO_ERRORS_SCHEMA, ModuleWithProviders } from '@angular/core';
-import { LogService, StoreService, AuthService, ApiService, FirebaseService } from './services';
-import { HttpClientModule } from '@angular/common/http';
-import { AuthGuard, AuthStateGuard } from './models';
+import {
+  // services
+  LogService,
+  StoreService,
+  AuthService,
+  ApiService,
+  FirebaseService,
+  // guards
+  AuthGuard,
+  AuthStateGuard,
+} from '.';
+import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 
 const BASE_SERVICES = [
   LogService,
@@ -19,10 +28,10 @@ const BASE_PROVIDERS = [
 @NgModule({
   declarations: [],
   imports: [
-    HttpClientModule,
+    NativeScriptHttpClientModule,
   ],
   exports: [
-    
+    NativeScriptHttpClientModule,
   ],
   schemas: [NO_ERRORS_SCHEMA]
 })

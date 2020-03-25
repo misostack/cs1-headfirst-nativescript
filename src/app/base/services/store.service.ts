@@ -10,14 +10,15 @@ import {
   remove,
   clear
 } from "tns-core-modules/application-settings";
-import { environment } from "@environments/environment";
+
 import {
   AppStates,
-  StoreDomain,
-  AppState,
   AuthState, 
-  UserState,  
-} from "@base/models";
+  UserState,
+  StoreDataTypes,
+  StoreDomain,
+  AppState,  
+} from "@base/index";
 import { Subject, BehaviorSubject, Observable } from "rxjs";
 import { delay } from "rxjs/operators";
 
@@ -40,15 +41,13 @@ export class StoreService {
 
   _getAppStates() : AppStates{
     return {
-      name: this.get<string>('version', environment.name),
-      debug: this.get<boolean>('version', environment.debug),
-      version: this.get<number>('version', environment.version),
       auth: this.get<object>('auth', {token: ''}),
       user: this.get<object>('user', null),
     }    
   }
 
-  listen(domain: 'app' | 'auth' | 'user' = 'app'): Observable<AppState>{
+  listen(domain: StoreDomain): Observable<AppState>{
+    
     if(domain === 'auth'){
       return this._authStateChanges$.asObservable().pipe(delay(500));
     }

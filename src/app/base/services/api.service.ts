@@ -17,7 +17,7 @@ export class ApiService {
   }
 
   ping() : Observable<any>{
-    return this.get('/ping')
+    return this.get('')
   }
 
   get<T>(path: string, params: {} = {}) {

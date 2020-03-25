@@ -1,7 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { LogService, StoreService, AuthService } from "@base/services";
-import { AppStates } from "@base/models";
-import { Observable } from "rxjs";
+import { LogService, AuthService } from "@base/index";
 import { t } from "@shared/pipes/translate.pipe";
 
 @Component({
@@ -12,18 +10,12 @@ import { t } from "@shared/pipes/translate.pipe";
 export class HomeContainer implements OnInit {
 
     appName: string;
-    appStates$: Observable<AppStates>
-    appStates: AppStates;    
 
     constructor(
         private log: LogService,
-        private store: StoreService,
         private auth: AuthService,
     ) {
-        // Use the component constructor to inject providers.        
-        this.store.listen('app').subscribe((states: AppStates) => {
-            this.appStates = states;
-        }, error => this.log.error(error))
+
     }
 
     ngOnInit(): void {
@@ -38,10 +30,6 @@ export class HomeContainer implements OnInit {
         } catch (error) {
             this.log.error(error)    
         }
-    }
-
-    onLogin() {
-        this.auth.logIn({identity: 'aa', password: '123'})
     }
 
     onLogout() {

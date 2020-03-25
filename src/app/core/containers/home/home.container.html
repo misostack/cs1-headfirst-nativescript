@@ -21,9 +21,7 @@
             <Button class="image-button"></Button>
             <Label text="Error Notifcation"></Label>
             <Button (tap)="raiseError()"  text="Raise Error"></Button>
-            <Label text="{{ appStates?.auth?.token }}"></Label>            
-            <Button *ngIf="appStates?.auth?.token?.length > 0" (tap)="onLogout()" text="Logout"></Button>            
-            <Button *ngIf="appStates?.auth?.token?.length === 0" (tap)="onLogin()" text="Log in"></Button>
+            <Button (tap)="onLogout()" text="Logout"></Button>                        
             <Label text="{{ 'APP_NAME' | t }}"></Label>
                       
         </StackLayout>
