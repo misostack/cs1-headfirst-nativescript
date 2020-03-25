@@ -44,4 +44,5 @@ export {
   StoreDataTypes,
   // guards
   AuthGuard,
+  AuthStateGuard,
 }
