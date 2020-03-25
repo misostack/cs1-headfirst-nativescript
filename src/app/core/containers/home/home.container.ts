@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { LogService, AuthService } from "@base/index";
+import { LogService, AuthService } from "@app/base";
 import { t } from "@shared/pipes/translate.pipe";
 
 @Component({

@@ -1,0 +1,16 @@
+<Page class="ns-root">
+  <ActionBar>
+      <Label text="{{ 'APP_NAME' | t }}"></Label>
+  </ActionBar>
+  
+  <GridLayout>
+      <StackLayout row="0">
+        <ns-ping-component [ping]="ping$ | async"></ns-ping-component>
+        <Button text="ping works!" class="btn btn-primary"></Button>
+        <GridLayout rows="80" columns="*, *">
+          <Button text="LOGIN PAGE" [nsRouterLink]="[APP_ROUTES.AUTH_LOGIN]" class="btn btn-primary btn-active" col="0"></Button>          
+        </GridLayout>        
+      </StackLayout>
+  </GridLayout>
+</Page>
+

@@ -7,6 +7,9 @@
       <StackLayout row="0">
         <Label text="{{ 'TRANSLATE_SERVICE_EXAMPLE' | t:example }}"></Label>
         <Button (tap)="doLogin()" text="Login" class="btn btn-primary"></Button>            
+        <GridLayout rows="80" columns="*, *">
+          <Button text="Example Ping" [nsRouterLink]="[APP_ROUTES.EXAMPLE_PING]" class="btn btn-primary btn-active" col="0"></Button>          
+        </GridLayout>        
       </StackLayout>
   </GridLayout>
 </Page>

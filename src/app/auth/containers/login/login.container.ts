@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '~/app/base/services';
+import { APP_ROUTES, AuthService } from '@app/base';
 
 @Component({
-  selector: 'ns-login',
+  selector: 'ns-login-container',
   templateUrl: './login.container.html',
   styleUrls: ['./login.container.scss']
 })
 export class LoginContainer implements OnInit {
 
+  APP_ROUTES = APP_ROUTES;
   example;
 
   constructor(

@@ -7,4 +7,12 @@ export const APP_ROUTES = {
 
   // home module
   HOME_INDEX: '/home',
+
+  // example
+  EXAMPLE_HOME: '/example',
+  EXAMPLE_PING: '/example/ping',
+}
+
+export const API_ROUTES = {
+  PING: '',
 }

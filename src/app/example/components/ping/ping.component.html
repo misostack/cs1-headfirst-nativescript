@@ -1,0 +1,12 @@
+<StackLayout  *ngIf="ping.apiVersion; else loading;">
+  <Label text="{{ping.apiVersion}}"></Label>
+  <Label text="{{ping.environment}}"></Label>
+  <Label text="{{ping.lastUpdated}}"></Label>
+  <Label text="{{ping.status}}"></Label>
+</StackLayout>
+<ng-template #loading>
+  <StackLayout>
+    <Label text="{{'TXT_LOADING' | t}}"></Label>
+  </StackLayout>
+</ng-template>
+

@@ -1,14 +1,43 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+// always import Shared
+import { SharedModule } from "@shared/shared.module";
+// next import RoutingModule
 import { ExampleRoutingModule } from './example-routing.module';
-import { NativeScriptCommonModule } from 'nativescript-angular/common';
+// next import providers : services, pipes, ...
+import {
+  PingService
+} from './services';
+// next import containers, components
+import { 
+  PingContainer 
+} from './containers';
 
+import { 
+  PingComponent 
+} from "./components";
+
+const EXAMPLE_PROVIDERS = [
+  PingService,
+]
+const EXAMPLE_CONTAINERS = [
+  PingContainer,
+]
+
+const EXAMPLE_COMPONENTS = [
+  PingComponent,
+]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ...EXAMPLE_CONTAINERS,
+    ...EXAMPLE_COMPONENTS,    
+  ],
   imports: [
     ExampleRoutingModule,
-    NativeScriptCommonModule
+    SharedModule,
+  ],
+  providers: [
+    ...EXAMPLE_PROVIDERS,
   ],
   schemas: [NO_ERRORS_SCHEMA]
 })

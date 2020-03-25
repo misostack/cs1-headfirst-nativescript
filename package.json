@@ -25,6 +25,8 @@
     "@ngrx/store": "^9.0.0",
     "@schematics/angular": "^9.0.5",
     "add": "^2.0.6",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
     "nativescript-angular": "~8.21.0",
     "nativescript-localize": "4.2.1",
     "node-sass": "^4.13.1",

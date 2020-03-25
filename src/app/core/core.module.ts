@@ -1,8 +1,9 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-// always impor BaseModule
+// always import Shared
 import { SharedModule } from "@shared/shared.module";
-
+// next import RoutingModule
 import { CoreRoutingModule } from "./core-routing.module";
+// next import containers, components
 import { HomeContainer } from "./containers";
 
 const CORE_COMPONENTS = [];

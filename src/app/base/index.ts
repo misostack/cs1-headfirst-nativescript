@@ -17,13 +17,20 @@ import {
 } from '@base/models/store/model';
 
 import {
-  APP_ROUTES
+  APP_ROUTES,
+  API_ROUTES,
 } from '@base/models/routes';
 
 import {
   AuthGuard,
   AuthStateGuard,
 } from '@base/models/guards';
+
+// DTOs
+
+import {
+  PingDTO
+} from '@base/models/dtos'
 
 export {
   // services
@@ -33,7 +40,8 @@ export {
   ApiService,
   FirebaseService,
   // routes
-  APP_ROUTES,  
+  APP_ROUTES,
+  API_ROUTES,
   // states
   AppStates,
   AppState,
@@ -45,4 +53,6 @@ export {
   // guards
   AuthGuard,
   AuthStateGuard,
+  // DTOs
+  PingDTO,
 }

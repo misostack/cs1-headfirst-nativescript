@@ -16,10 +16,6 @@ export class ApiService {
       console.log('ApiService')
   }
 
-  ping() : Observable<any>{
-    return this.get('')
-  }
-
   get<T>(path: string, params: {} = {}) {
     return this.marshal(
       this.http
